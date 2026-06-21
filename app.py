@@ -71,10 +71,10 @@ if not check_password():
 # ============================================================
 @st.cache_data
 def load_data():
-    covid = pd.read_csv("C:/Users/user/OneDrive/Desktop/covid_sierra_leone_clean.csv", parse_dates=["date"])
-    ebola = pd.read_csv("C:/Users/user/OneDrive/Desktop/ebola_sierra_leone_clean.csv", parse_dates=["report_date"])
-    ebola_subtypes = pd.read_csv("C:/Users/user/OneDrive/Desktop/ebola_sierra_leone_subtypes.csv")
-    causes = pd.read_csv("C:/Users/user/OneDrive/Desktop/causes_of_death_sierra_leone.csv")
+    covid = pd.read_csv("data/covid_sierra_leone_clean.csv", parse_dates=["date"])
+    ebola = pd.read_csv("data/ebola_sierra_leone_clean.csv", parse_dates=["report_date"])
+    ebola_subtypes = pd.read_csv("data/ebola_sierra_leone_subtypes.csv")
+    causes = pd.read_csv("data/causes_of_death_sierra_leone.csv")
     return covid, ebola, ebola_subtypes, causes
 
 covid_sl_clean, ebola_sl_all, ebola_sl_subtypes, top15 = load_data()
